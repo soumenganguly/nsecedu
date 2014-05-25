@@ -1,0 +1,10 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<br />
+<p align="justify">Some details goes here</p>
+<br />
+<p align="justify">Some of our recruiters
+<br />
+<img src="{% static "web/images/placement/tcs.jpg" %}" alt="wipro" style="width:150px;height:150px;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/infosys.jpg" %}" alt="tcs" style="width:150px;height:150px;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/accenture.jpg" %}" alt="accenture" style="width:150px;height:150px;"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/ibm.jpg" %}" alt="ibm" style="width:150px;height:50px" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/wipro.jpg" %}" alt="wipro" style="width:150px;height:150px;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/cts.jpg" %}" alt="wipro" style="width:150px;height:150px;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/techmahindra.jpg" %}" alt="wipro" style="width:150px;height:150px;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "web/images/placement/hp.jpg" %}" alt="wipro" style="width:150px;height:150px;" /></p>
+{% endblock content %}

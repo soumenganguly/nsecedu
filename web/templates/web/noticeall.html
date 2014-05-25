@@ -1,0 +1,16 @@
+{% extends "web/index.html" %}
+
+{% block content %}
+<p align="center" style="color:cyan"><b><u>NOTICE HISTORY</u></b></p>
+<ul>
+<br />
+{% for i in allnotice %}
+   {% if i.files %}
+   <li><a href="{{ i.files.url }}" target="_blank">{{ i.details }}</a>
+     {% endif %}
+   <br /><b>Date</b>-{{ i.date }}</li>
+<p>---------------------------------------------------------------------------</p>
+{% endfor %}
+</ul>
+{% endblock content %}
+

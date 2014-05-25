@@ -1,0 +1,62 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block container %}
+
+<div class="header">
+<table>
+<tr>
+<td><img src="{% static "web/images/nsec.jpg" %}" style="height:100px;" alt="logo"/></td>
+<td style="color:white;font-size:20px;">Netaji Subhash Engineering College<br />নেতাজী সুভাষ ইঞ্জিনিয়ারিং কলেজ<br />Garia,Kolkata</td>
+</tr>
+</table>
+</div>
+<!-- Block UserTab -->
+<div id="usertab" style="height:20px;width:100%;background-color:pink;">
+{% block usertab %}
+<b style="float:right;">Welcome,{{ user.first_name }}&nbsp;|&nbsp;<a href="{% url 'password_change' %}">Change password</a>&nbsp;|&nbsp;<a href="{% url 'logout' %}">Logout</a></b>
+{% endblock usertab %}
+</div>
+
+<!-- Endblock UserTab -->
+<br />
+
+<div class="menu">
+{% block menu %}
+<a href="{% url 'home' user.id %}"><div class="links">Home</div></a>
+<br />
+<a href="{% url 'files' %}"><div class="links">Files</div></a>
+<br />
+<a href="{% url 'search'  %}"><div class="links">Search</div></a>
+<br />
+<a href="{% url 'post' %}"><div class="links">Post</div></a>
+<br />
+{% endblock menu %}
+</div>
+
+<div class="usercontent">
+{% block content %}
+<br />
+<b style="font-size:14px;"><u>Recent news</u></b>
+<br />
+<ul>
+{% for i in notice %}
+{% if i.files %}
+<li><a href="{{ i.files.url }}" target="_blank">{{ i.details }}</a>
+<br />
+Date:{{ i.date }}</li>
+<br />
+{% else %}
+<li>{{ i.details }}
+<br />Date:{{ i.date }}</li>
+<br />
+{% endif %}
+<br />
+{% endfor %}
+</ul>
+<p align="right"><a href="{% url 'notice' %}">View all</a></p>
+<br />
+{% endblock content %}
+</div>
+
+{% endblock container %}
+

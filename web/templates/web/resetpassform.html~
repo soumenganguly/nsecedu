@@ -1,0 +1,13 @@
+{% extends "web/index.html" %}
+{% block content %}
+{% if validlink %}
+{{ form.errors }}
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Confirm" />
+</form>
+{% else %}
+ <p>This reset link is no longer valid!</p>
+{% endif %}
+{% endblock content %}

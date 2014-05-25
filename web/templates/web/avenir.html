@@ -1,0 +1,9 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<br />
+<p><img src="{% static "web/images/avenir.jpg" %}" alt="avenir" style="width:150px;height:150px;" /></p>
+<p align="justify">The annual tech fest of NSEC,Avenir is one of the earliest tech fests of Kolkata,which was set up in collaboration with Kshitij of Indian Institute of Technology(IIT), Kharagpur. The tech fest has seen participants from almost all major engineering colleges of India. It started in 2003 with a participation of 100 people. Over the years it has grown enormously with Avenir 2014 seeing participants count of over 4000 from all major engineering colleges of India.</p>
+<p align="right">
+<a href="{% url 'avenir_images' %}">Images</a></p>
+{% endblock content %}

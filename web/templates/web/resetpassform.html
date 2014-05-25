@@ -1,0 +1,47 @@
+{% extends "web/index.html" %}
+
+{% block container %}
+
+<div class="header">
+</div>
+
+
+<br />
+
+<div class="menu">
+{% block menu %}
+<a href="{% url 'index' %}"><div class="links">About</div></a>
+<br />
+<a href="{% url 'dirdesk' %}"><div class="links">Directors Desk</div></a>
+<br />
+<a href="{% url 'campusmap' %}"><div class="links">Campus</div></a>
+<br />
+<a href="{% url 'departments' %}"><div class="links" >Departments</div></a>
+<br />
+<a href="{% url 'avenir' %}"><div class="links">Avenir</div></a>
+<br />
+<a href="{% url 'phoenix' %}"><div class="links">Phoenix</div></a>
+<br />
+<a href="{% url 'nixal' %}"><div class="links">Nixal</div></a>
+<br />
+<a href="{% url 'contact' %}"><div class="links">Contact</div></a>
+<br />
+<a href="{% url 'login' %}"><div class="links">Member Login</div></a>
+<br />
+{% endblock menu %}
+</div>
+
+{% block content %}
+{% if validlink %}
+{{ form.errors }}
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Confirm" />
+</form>
+{% else %}
+ <p>This reset link is no longer valid!</p>
+{% endif %}
+{% endblock content %}
+
+{% endblock container %}

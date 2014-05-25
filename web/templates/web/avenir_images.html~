@@ -1,0 +1,5 @@
+{% extend "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<p>Pictures from avenir goes here.</p>
+{% endblock content %}

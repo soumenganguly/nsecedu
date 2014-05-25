@@ -1,0 +1,18 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block container %}
+<div id="header">
+<table>
+<tr>
+<td><img src="{% static "web/images/nsec.jpg" %}" style="height:100px;" alt="logo"/></td>
+<td style="color:white;font-size:20px;">Netaji Subhash Engineering College<br />নেতাজী সুভাষ ইঞ্জিনিয়ারিং কলেজ<br />Garia,Kolkata</td>
+</tr>
+</table>
+</div>
+<br />
+<br />
+<p align="center">You have succesfully logged out</p>
+<p align="center"><a href="{% url 'index' %}">Take me back to site</a></p>
+<p align="center"><a href="{% url 'login' %}">Log in</a></p>
+<br />
+{% endblock container %}

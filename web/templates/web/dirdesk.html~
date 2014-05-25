@@ -1,0 +1,15 @@
+{% extends "web/index.html" %}
+{% block content %}
+{% load staticfiles %}
+<br />
+<table>
+<tr>
+<td><img src="{% static 'web/images/director/director.jpg' %}" width="100px" height="100px" style="border:1px solid black;" alt="Dir"/></td>
+</tr>
+<tr>
+<td><b>Name goes here</b></td>
+</tr>
+</table>
+<p>At the outset I extend my warm welcome to you all who will be joining our institution in the coming semester. The college also welcomes you to four years of enriching experience that you are going to cherish all your life. You must keep in mind that the achievement and reputation of the college rests on your shoulders.Hope you will contribute towards the achievement though your whole hearted co-operation with the teachers and college authorities in maintaining academic sanctity, preserving discipline, sincerity, integrity by virtue of your inherent talent and preseverence by your traditionality, so that your institute will achieveits mission and vision.At the end, I wish you all a bright prospect through interaction with your experienced teachers so as to enable you to imprint a hallmark in your career.
+       Dr. Hrishikesh Mandal</p>
+{% endblock content %}

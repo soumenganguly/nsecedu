@@ -1,0 +1,39 @@
+{% extends "web/index.html" %}
+{% block content %}
+<br />
+<br />
+<table align="center" style="border:1px solid black;">
+<form method="post" action="">
+{% csrf_token %}
+<tr>
+<td>{{ form.student_id.label }}</td>
+<td>{{ form.student_id }}</td>
+</tr>
+<tr>
+<td>{{ form.firstname.label }}</td>
+<td>{{ form.firstname }}</td>
+</tr>
+<tr>
+<td>{{ form.lastname.label }}</td>
+<td>{{ form.lastname }}</td>
+</tr>
+<tr>
+<td>{{ form.email.label }}</td>
+<td>{{ form.email }}</td>
+</tr>
+<tr>
+<td>{{ form.dept.label }}</td>
+<td>{{ form.dept }}</td>
+</tr>
+<tr>
+<td>{{ form.year.label }}</td>
+<td>{{ form.year }}</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Register" /></td>
+</tr>
+</form>
+</table>
+{% endblock content %}
+

@@ -1,0 +1,37 @@
+{% extends "web/userhome.html" %}
+{% block usertab %}
+<<<a href="{% url 'search' %}">Back</a><b style="float:right;">Welcome,{{ user.first_name }}&nbsp;|&nbsp;<a href="{% url 'password_change' %}">Password Change</a>&nbsp;|&nbsp;<a href="{% url 'logout' %}">Logout</a></b>
+{% endblock usertab %}
+{% block content %}
+<br />
+{% for i in users %}
+First Name:{{ i.firstname }}
+<br />
+Last Name:{{ i.lastname }}
+<br />
+Department:{{ i.department }}
+<br />
+{% endfor %}
+<p align="left">
+<br />
+<b style="color:#08298A"><h3><u>Recent Posts</u></h3></b>
+<ul>
+{% for j in posts %}
+<li>{{ j.post }}
+<br />
+Date:{{ j.date }}</li>
+{% endfor %}
+</ul>
+<br />
+<b style="color:#08298A;"><h3><u>Files</u></h3></b>
+{% for i in files %}
+<li>{{ i.text }}
+<br />
+<a href="{{ i.files.url }}" target="_blank">{{ i.files }}</a></li>
+{% endfor %}
+</ul>
+</p>
+{% endblock content %}
+
+
+

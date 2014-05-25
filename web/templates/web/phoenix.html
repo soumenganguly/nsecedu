@@ -1,0 +1,13 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<p><img src="{% static "web/images/phoenix.jpg" %}" alt="phoenix" style="width:200px;height:200px;" /></p>
+<p align="justify">The history of PHOENIX, the official tech club of the college, dates back to 2006, when seven students from the college formed a club that would think beyond the academic courses that everyone study in the college. They began "Phoenix" the Tech-Club. Every member of NSEC today is officially a member of Phoenix, and Phoenix is now well known in other colleges.</p>
+<p align="justify">The functioning of Phoenix stands on its various pillars, The PR Team, the Creative Team, the Database Team, the Web Team, the C Team, the Photography Team etc. Today, besides organising the three big events,phoenix holds forums. Presently they are: <b>The C Forum,The Robotix Forum,The SSPD forum</b> and the <b>Web Designing Forum</b>. <i>"Come, Let's Rise"</i>, is the motto of the club</p>
+<p>
+<ul><b>Events</b>
+<li><a href="{% url 'avenir' %}">Avenir</a></li>
+<li>Brainstormer</li>
+<li>Kurukshetra</li>
+</ul>
+{% endblock content %}

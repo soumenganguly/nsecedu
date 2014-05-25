@@ -1,0 +1,4 @@
+{% extends "web/index.html" %}
+{% block content %}
+This page is for department listings
+{% endblock content %}

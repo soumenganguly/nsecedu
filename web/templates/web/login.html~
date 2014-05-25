@@ -1,0 +1,30 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<br />
+<p align="center"> <img src="{% static 'web/images/nsec.jpg' %}" alt="logo" width="100px" height="100px" /></p>
+<br />
+{{ form.errors }}
+<br />
+<table align="center" style="font-size:15px;">
+<form method="post" action="">
+{% csrf_token %}
+<tr>
+<td>{{ form.username.label }}</td>
+<td>{{ form.username }}<b style="color:#A9A9B8;font-size:12px;">[Student id]</b></td>
+<td></td>
+</tr>
+<tr>
+<td>{{ form.password.label }}</td>
+<td>{{ form.password }}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Login" /></td>
+<td></td>
+</tr>
+</form>
+</table>
+{% endblock content %}
+

@@ -1,0 +1,7 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<p><img src="{% static "web/images/rms.jpg" %}" alt="rms" style="width:150px;height:150px;" /></p>
+<br />
+<a href="{% url 'nixal' %}"><-Back</a>
+{% endblock content %}

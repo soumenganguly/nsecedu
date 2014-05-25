@@ -1,0 +1,33 @@
+{% extends "web/index.html" %}
+{% block content %}
+<br />
+<b><u>Departments</u></b>
+<br />
+<br />
+<ul>
+<!-- engineering block -->
+<li>
+ <ul>Engineering
+  <li><a href="{% url 'aeie' %}">Applied Electronics an Instrumentation Engineering(AEIE)</a></li>
+  <li><a href="{% url 'bme' %}">Bio Medical Enigineering(BME)</a></li>
+  <li><a href="{% url 'ce' %}">Civil Engineering(CE)</a></li>
+  <li><a href="{% url 'cse' %}">Computer Science and Engineering(CSE)</a></li>
+  <li><a href="{% url 'ee' %}">Electrical Engineering(EE)</a></li>
+  <li><a href="{% url 'ece' %}">Electronics and Communication Engineering(ECE)</a></li>
+  <li><a href="{% url 'it' %}">Information Technology(IT)</a></li>
+  <li><a href="{% url 'me' %}">Mechanical Engineering(ME)</a></li>
+ </ul>
+ 
+</li>
+<!-- end engineering block -->
+
+<!-- management block -->
+<li>
+<ul>Management
+  <li><a href="{% url 'bba' %}">Bachelors of Business Management(BBA)</a></li>
+  <li><a href="{% url 'mba' %}">Masters of Business Management(MBA)</a></li>
+ </ul>
+</li>
+<!-- end management block -->
+</ul>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "web/index.html" %}
+{% autoescape off %}
+{% block content %}
+You're recieving this email because you requested a password reset for your user account at {{ site_name }}.
+<br />
+Please go to the following page and reset your password.
+<br />
+{{ protocol }}://{{ domain }}{% url 'django.contrib.auth.views.password_reset_confirm' uidb64=uid token=token %}
+<br />
+Thanks for using out site
+{% endblock content %}
+{% endautoescape %}

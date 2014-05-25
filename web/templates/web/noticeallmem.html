@@ -1,0 +1,18 @@
+{% extends "web/userhome.html" %}
+{% block content %}
+<p align="center"><b style="color:#A9A9F5;"><u>NOTICE HISTORY</u></b></p>
+<ul>
+{% for i in allnotice %}
+<br />
+{% if i.files %}
+<li><a href="{{ i.files.url }}" target="_blank">{{ i.details }}</a>
+<br />
+<b>Date</b>-{{ i.date }}</li>
+{% else %}
+<li>{{ i.details }}
+<br />
+Date:{{ i.date }}</li>
+{% endif %}
+{% endfor %}
+{% endblock content %}
+

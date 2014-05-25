@@ -1,0 +1,8 @@
+{% extends "web/index.html" %}
+{% block content %}
+<p>This page is for phoenix</p>
+<p>Events</p>
+<ul>
+ <li><a href="{% url 'avenir' %}">Avenir</a></li>
+</ul>
+{% endblock content %}

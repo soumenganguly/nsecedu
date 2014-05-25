@@ -1,0 +1,8 @@
+{% extends "web/index.html" %}
+{% load staticfiles %}
+{% block content %}
+<img src="{% static 'web/images/nixal.jpg' %}" alt="nixal_logo" width="100px" height="150px"/>
+<p><b>Nixal</b>,is the GNU/Linux users' group of Netaji Subhash Engineering College.The main objective of this group is to promote the use of Free Software in everyday life.Since its inception in 2003,many students form a part of this group and conduct seminars and workshops all year round.Students get to learn new technologies from the pioneers of the Free & Open Source Software(FOSS) field through interactive sessions. </p>
+<p>You can find more information <a href="http://www.nongnu.org/gug-nixal/index.html" target="_blank">here</a>.</p>
+<p><a href="{% url 'nixal_images' %}">Images</a></p>
+{% endblock content %}

@@ -1,0 +1,4 @@
+{% extends "web/post.html" %}
+{% block content %}
+<p>Your post is deleted successfully.</p>
+{% endblock content %}

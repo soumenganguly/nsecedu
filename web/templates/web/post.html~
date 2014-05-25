@@ -1,0 +1,43 @@
+{% extends "web/userhome.html" %}
+{% block content %}
+<table align="center">
+<form method="post" action="" >
+{% csrf_token %}
+<tr>
+<td>{{ form.post.label }}</td>
+<td><textarea cols="60" name="post"  id="id_post" rows="10"></textarea></td>
+<td><b style="color:red;font-size:14px;">{{ form.post.errors }}</b></td>
+</tr>
+<tr>
+<td>{{ form.date.label }}</td>
+<td>{{ form.date }}&nbsp;<b style="color:#BDBDBD;font-size:12px;">[Format:yyyy-mm-dd]</b></td>
+<td><b style="color:red;font-size:14px;">{{ form.date.errors }}</b></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Post" /></td>
+<td></td>
+</tr>
+</form>
+</table>
+<br />
+<b style="font-size:14px;color:#08298A;"><u>Your posts</u></b>
+<br />
+{% for j in posts %}
+<form method="post">
+{% csrf_token %}
+<table>
+<tr>
+<td>{{ j.post }}</td>
+<td></td>
+</tr>
+<tr>
+<td>Date:{{ j.date }}</td>
+<td><a href="{% url 'remove_post' j.id %}"><input type="submit" value="Remove"/></a></td>
+</tr>
+</table>
+</form>
+<br />
+{% endfor %}
+<br />
+{% endblock content %}

@@ -1,0 +1,7 @@
+{% extends "web/index.html" %}
+{% block content %}
+<br />
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=Garia+Station+Rd,Nabagram,Panchpota&zoom=14&size=400x300&markers=color:blue%7Clabel:T%7CGaria+Station,Kolkata&sensor=false&markers=color:red%7Clabel:C%7CNetaji+Subhash+Engineering+College,Garia,Kolkata&key= 	
+AIzaSyCZd3fyqY7Iz48R2WM1exWugFg9ba3CCYs" alt="map"></img>
+<p><b>T</b>- Garia Train Station&nbsp;<b>C</b>- Netaji Subhash Engineering College</p>
+{% endblock content %}

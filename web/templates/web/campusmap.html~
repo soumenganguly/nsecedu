@@ -1,0 +1,10 @@
+{% extends "web/index.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="images">
+</div>
+If you want directions,Click <a href="https://www.google.com/maps/dir//Netaji+Subhash+Engineering+College,+Techno+City,+Panchpota,+Garia,+Kolkata,+West+Bengal,+700152,+Mauza+Ranabhutia,+Techno+City,+Ranabhutia,+West+Bengal+700150,+India/@37.0625,-95.677068,4z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a02722b05a38e87:0x276c0d30e6be12ea!2m2!1d88.414813!2d22.476064" target="_blank">here</a>
+<br />
+<br />
+Click <a href="{% url 'map' %}">here</a> to view the map
+{% endblock content %}
